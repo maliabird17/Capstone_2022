@@ -41,3 +41,4 @@ vignettes/*.pdf
 
 # Do not commit raw data file (too large)
 raw_data/
+previous_code/
