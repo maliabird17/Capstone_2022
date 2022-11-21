@@ -28,7 +28,7 @@ testes <- read_tsv("raw_data/Madalena_microarraysExpression_testes.csv") %>%
 # ---- 
 
 ### SAMPLE REFERENCE TABLE ###
-labels <- colnames(all_organs)[-1] # extracting vector of labels
+labels <- colnames(all_organs) # extracting vector of labels
 
 mega <- as.data.frame(labels) %>%
   # individual columns for genotype, age, and sample number
@@ -48,7 +48,9 @@ mega <- as.data.frame(labels) %>%
   mutate(replicate = str_replace_all(replicate, "v", "5")) %>%
   mutate(replicate = str_replace_all(replicate, "i", "1")) %>%
   mutate(replicate = str_replace_all(replicate, c("g" = "", "t" = "", "m" = "")))
-  
+
+
+
 
 
 
