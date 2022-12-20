@@ -42,3 +42,6 @@ vignettes/*.pdf
 # Do not commit raw data file (too large)
 raw_data/
 previous_code/
+code/DEGs_WTmuscle-ignore.R
+code/DEGs_WTtestes-ignore.R
+code/DEGs_WTgut-ignore.R
