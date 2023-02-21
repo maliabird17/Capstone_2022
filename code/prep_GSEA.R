@@ -177,6 +177,9 @@ MUTposneg_69muscle <- c(nrow(df_mutmuscle_young %>% filter(df_mutmuscle_young[2]
 write.table(df_mutmuscle_old, paste("/Users/malia/Desktop/Capstone_2022/processed_data/", "muscle_mut_old_sig", ".rnk", sep=""), sep = "\t", row.names = FALSE, col.names = FALSE, quote = FALSE)
 
 
+source("/Users/malia/Desktop/Capstone_2022/code/gut_relative3.R")
+source("/Users/malia/Desktop/Capstone_2022/code/testes_relative3.R")
+source("/Users/malia/Desktop/Capstone_2022/code/muscle_relative3.R")
 
 
 ##### INDIVIDUAL GUT DEGS ####
@@ -187,8 +190,8 @@ df_gut36_mut <- read.csv("processed_data/Gut_MUT-3-6.TXT", sep = "\t", na.string
   filter(padj <= 0.05) %>%
   select(Human.gene.name, FC)
 
-write.table(df_gut36_mut, paste("/Users/malia/Desktop/Capstone_2022/processed_data/",
-                                "gut_mut-3-6_sig", ".rnk", sep=""), sep = "\t",
+write.table(df_gut36_mut, paste("/Users/malia/Desktop/Capstone_2022/processed_data/for_gsea/",
+                                "gut_mut-3-6_sig", ".txt", sep=""), sep = "\t",
             row.names = FALSE, col.names = FALSE, quote = FALSE)
 
 df_gut39_mut <- read.csv("processed_data/Gut_MUT-3-9.TXT", sep = "\t", na.strings=c("","NA")) %>% 
@@ -198,7 +201,7 @@ df_gut39_mut <- read.csv("processed_data/Gut_MUT-3-9.TXT", sep = "\t", na.string
   filter(padj <= 0.05) %>%
   select(Human.gene.name, FC)
 
-write.table(df_gut39_mut, paste("/Users/malia/Desktop/Capstone_2022/processed_data/", "gut_mut-3-9_sig", ".rnk", sep=""), sep = "\t", row.names = FALSE, col.names = FALSE, quote = FALSE)
+write.table(df_gut39_mut, paste("/Users/malia/Desktop/Capstone_2022/processed_data/for_gsea/", "gut_mut-3-9_sig", ".txt", sep=""), sep = "\t", row.names = FALSE, col.names = FALSE, quote = FALSE)
 
 
 
@@ -209,7 +212,7 @@ df_gut36 <- read.csv("processed_data/Gut_WT-3-6.TXT", sep = "\t", na.strings=c("
   filter(padj <= 0.05) %>%
   select(Human.gene.name, FC)
 
-write.table(df_gut36, paste("/Users/malia/Desktop/Capstone_2022/processed_data/", "gut_wt-3-6_sig", ".rnk", sep=""), sep = "\t", row.names = FALSE, col.names = FALSE, quote = FALSE)
+write.table(df_gut36, paste("/Users/malia/Desktop/Capstone_2022/processed_data/for_gsea/", "gut_wt-3-6_sig", ".txt", sep=""), sep = "\t", row.names = FALSE, col.names = FALSE, quote = FALSE)
 
 df_gut69 <- read.csv("processed_data/Gut_WT-3-9.TXT", sep = "\t", na.strings=c("","NA")) %>% 
   select(Human.gene.name, FC, padj) %>%
@@ -218,7 +221,7 @@ df_gut69 <- read.csv("processed_data/Gut_WT-3-9.TXT", sep = "\t", na.strings=c("
   filter(padj <= 0.05) %>%
   select(Human.gene.name, FC)
 
-write.table(df_gut69, paste("/Users/malia/Desktop/Capstone_2022/processed_data/", "gut_wt-3-9_sig", ".rnk", sep=""), sep = "\t", row.names = FALSE, col.names = FALSE, quote = FALSE)
+write.table(df_gut69, paste("/Users/malia/Desktop/Capstone_2022/processed_data/for_gsea/", "gut_wt-3-9_sig", ".txt", sep=""), sep = "\t", row.names = FALSE, col.names = FALSE, quote = FALSE)
 
 
 
@@ -230,7 +233,7 @@ df_gut924 <- read.csv("processed_data/Gut_WT-3-24.TXT", sep = "\t", na.strings=c
   filter(padj <= 0.05) %>%
   select(Human.gene.name, FC)
 
-write.table(df_gut924, paste("/Users/malia/Desktop/Capstone_2022/processed_data/", "gut_wt-3-24_sig", ".rnk", sep=""), sep = "\t", row.names = FALSE, col.names = FALSE, quote = FALSE)
+write.table(df_gut924, paste("/Users/malia/Desktop/Capstone_2022/processed_data/for_gsea/", "gut_wt-3-24_sig", ".txt", sep=""), sep = "\t", row.names = FALSE, col.names = FALSE, quote = FALSE)
 
 df_gut2436 <- read.csv("processed_data/Gut_WT-3-36.TXT", sep = "\t", na.strings=c("","NA")) %>% 
   select(Human.gene.name, FC, padj) %>%
@@ -239,7 +242,7 @@ df_gut2436 <- read.csv("processed_data/Gut_WT-3-36.TXT", sep = "\t", na.strings=
   filter(padj <= 0.05) %>%
   select(Human.gene.name, FC)
 
-write.table(df_gut2436, paste("/Users/malia/Desktop/Capstone_2022/processed_data/", "gut_wt-3-36_sig", ".rnk", sep=""), sep = "\t", row.names = FALSE, col.names = FALSE, quote = FALSE)
+write.table(df_gut2436, paste("/Users/malia/Desktop/Capstone_2022/processed_data/for_gsea/", "gut_wt-3-36_sig", ".txt", sep=""), sep = "\t", row.names = FALSE, col.names = FALSE, quote = FALSE)
 
 
 ##### INDIVIDUAL TESTES DEGS ####
@@ -250,7 +253,7 @@ df_testes36_mut <- read.csv("processed_data/Testes_MUT-3-6.TXT", sep = "\t", na.
   filter(padj <= 0.05) %>%
   select(Human.gene.name, FC)
 
-write.table(df_testes36_mut, paste("/Users/malia/Desktop/Capstone_2022/processed_data/", "testes_mut-3-6_sig", ".rnk", sep=""), sep = "\t", row.names = FALSE, col.names = FALSE, quote = FALSE)
+write.table(df_testes36_mut, paste("/Users/malia/Desktop/Capstone_2022/processed_data/for_gsea/", "testes_mut-3-6_sig", ".txt", sep=""), sep = "\t", row.names = FALSE, col.names = FALSE, quote = FALSE)
 
 df_testes39_mut <- read.csv("processed_data/Testes_MUT-3-9.TXT", sep = "\t", na.strings=c("","NA")) %>% 
   select(Human.gene.name, FC, padj) %>%
@@ -259,7 +262,7 @@ df_testes39_mut <- read.csv("processed_data/Testes_MUT-3-9.TXT", sep = "\t", na.
   filter(padj <= 0.05) %>%
   select(Human.gene.name, FC)
 
-write.table(df_testes39_mut, paste("/Users/malia/Desktop/Capstone_2022/processed_data/", "testes_mut-3-9_sig", ".rnk", sep=""), sep = "\t", row.names = FALSE, col.names = FALSE, quote = FALSE)
+write.table(df_testes39_mut, paste("/Users/malia/Desktop/Capstone_2022/processed_data/for_gsea/", "testes_mut-3-9_sig", ".txt", sep=""), sep = "\t", row.names = FALSE, col.names = FALSE, quote = FALSE)
 
 
 
@@ -271,7 +274,7 @@ df_testes36 <- read.csv("processed_data/Testes_WT-3-6.TXT", sep = "\t", na.strin
   filter(padj <= 0.05) %>%
   select(Human.gene.name, FC)
 
-write.table(df_testes36, paste("/Users/malia/Desktop/Capstone_2022/processed_data/", "testes_wt-3-6_sig", ".rnk", sep=""), sep = "\t", row.names = FALSE, col.names = FALSE, quote = FALSE)
+write.table(df_testes36, paste("/Users/malia/Desktop/Capstone_2022/processed_data/for_gsea/", "testes_wt-3-6_sig", ".txt", sep=""), sep = "\t", row.names = FALSE, col.names = FALSE, quote = FALSE)
 
 df_testes69 <- read.csv("processed_data/Testes_WT-3-9.TXT", sep = "\t", na.strings=c("","NA")) %>% 
   select(Human.gene.name, FC, padj) %>%
@@ -280,7 +283,7 @@ df_testes69 <- read.csv("processed_data/Testes_WT-3-9.TXT", sep = "\t", na.strin
   filter(padj <= 0.05) %>%
   select(Human.gene.name, FC)
 
-write.table(df_testes69, paste("/Users/malia/Desktop/Capstone_2022/processed_data/", "testes_wt-3-9_sig", ".rnk", sep=""), sep = "\t", row.names = FALSE, col.names = FALSE, quote = FALSE)
+write.table(df_testes69, paste("/Users/malia/Desktop/Capstone_2022/processed_data/for_gsea/", "testes_wt-3-9_sig", ".txt", sep=""), sep = "\t", row.names = FALSE, col.names = FALSE, quote = FALSE)
 
 
 
@@ -292,7 +295,7 @@ df_testes924 <- read.csv("processed_data/Testes_WT-3-24.TXT", sep = "\t", na.str
   filter(padj <= 0.05) %>%
   select(Human.gene.name, FC)
 
-write.table(df_testes924, paste("/Users/malia/Desktop/Capstone_2022/processed_data/", "testes_wt-3-24_sig", ".rnk", sep=""), sep = "\t", row.names = FALSE, col.names = FALSE, quote = FALSE)
+write.table(df_testes924, paste("/Users/malia/Desktop/Capstone_2022/processed_data/for_gsea/", "testes_wt-3-24_sig", ".txt", sep=""), sep = "\t", row.names = FALSE, col.names = FALSE, quote = FALSE)
 
 df_testes2436 <- read.csv("processed_data/Testes_WT-3-36.TXT", sep = "\t", na.strings=c("","NA")) %>% 
   select(Human.gene.name, FC, padj) %>%
@@ -301,7 +304,7 @@ df_testes2436 <- read.csv("processed_data/Testes_WT-3-36.TXT", sep = "\t", na.st
   filter(padj <= 0.05) %>%
   select(Human.gene.name, FC)
 
-write.table(df_testes2436, paste("/Users/malia/Desktop/Capstone_2022/processed_data/", "testes_wt-3-36_sig", ".rnk", sep=""), sep = "\t", row.names = FALSE, col.names = FALSE, quote = FALSE)
+write.table(df_testes2436, paste("/Users/malia/Desktop/Capstone_2022/processed_data/for_gsea/", "testes_wt-3-36_sig", ".txt", sep=""), sep = "\t", row.names = FALSE, col.names = FALSE, quote = FALSE)
 
 
 ##### INDIVIDUAL MUSCLE DEGS ####
@@ -313,7 +316,7 @@ df_muscle36_mut <- read.csv("processed_data/Muscle_MUT-3-6.TXT", sep = "\t", na.
   filter(padj <= 0.05) %>%
   select(Human.gene.name, FC)
 
-write.table(df_muscle36_mut, paste("/Users/malia/Desktop/Capstone_2022/processed_data/", "muscle_mut-3-6_sig", ".rnk", sep=""), sep = "\t", row.names = FALSE, col.names = FALSE, quote = FALSE)
+write.table(df_muscle36_mut, paste("/Users/malia/Desktop/Capstone_2022/processed_data/for_gsea/", "muscle_mut-3-6_sig", ".txt", sep=""), sep = "\t", row.names = FALSE, col.names = FALSE, quote = FALSE)
 
 df_muscle39_mut <- read.csv("processed_data/Muscle_MUT-3-9.TXT", sep = "\t", na.strings=c("","NA")) %>% 
   select(Human.gene.name, FC, padj) %>%
@@ -322,7 +325,7 @@ df_muscle39_mut <- read.csv("processed_data/Muscle_MUT-3-9.TXT", sep = "\t", na.
   filter(padj <= 0.05) %>%
   select(Human.gene.name, FC)
 
-write.table(df_muscle39_mut, paste("/Users/malia/Desktop/Capstone_2022/processed_data/", "muscle_mut-3-9_sig", ".rnk", sep=""), sep = "\t", row.names = FALSE, col.names = FALSE, quote = FALSE)
+write.table(df_muscle39_mut, paste("/Users/malia/Desktop/Capstone_2022/processed_data/for_gsea/", "muscle_mut-3-9_sig", ".txt", sep=""), sep = "\t", row.names = FALSE, col.names = FALSE, quote = FALSE)
 
 
 
@@ -333,7 +336,7 @@ df_muscle36 <- read.csv("processed_data/Muscle_WT-3-6.TXT", sep = "\t", na.strin
   filter(padj <= 0.05) %>%
   select(Human.gene.name, FC)
 
-write.table(df_muscle36, paste("/Users/malia/Desktop/Capstone_2022/processed_data/", "muscle_wt-3-6_sig", ".rnk", sep=""), sep = "\t", row.names = FALSE, col.names = FALSE, quote = FALSE)
+write.table(df_muscle36, paste("/Users/malia/Desktop/Capstone_2022/processed_data/for_gsea/", "muscle_wt-3-6_sig", ".txt", sep=""), sep = "\t", row.names = FALSE, col.names = FALSE, quote = FALSE)
 
 df_muscle69 <- read.csv("processed_data/Muscle_WT-3-9.TXT", sep = "\t", na.strings=c("","NA")) %>% 
   select(Human.gene.name, FC, padj) %>%
@@ -342,7 +345,7 @@ df_muscle69 <- read.csv("processed_data/Muscle_WT-3-9.TXT", sep = "\t", na.strin
   filter(padj <= 0.05) %>%
   select(Human.gene.name, FC)
 
-write.table(df_muscle69, paste("/Users/malia/Desktop/Capstone_2022/processed_data/", "muscle_wt-3-9_sig", ".rnk", sep=""), sep = "\t", row.names = FALSE, col.names = FALSE, quote = FALSE)
+write.table(df_muscle69, paste("/Users/malia/Desktop/Capstone_2022/processed_data/for_gsea/", "muscle_wt-3-9_sig", ".txt", sep=""), sep = "\t", row.names = FALSE, col.names = FALSE, quote = FALSE)
 
 
 
@@ -354,7 +357,7 @@ df_muscle924 <- read.csv("processed_data/Muscle_WT-3-24.TXT", sep = "\t", na.str
   filter(padj <= 0.05) %>%
   select(Human.gene.name, FC)
 
-write.table(df_muscle924, paste("/Users/malia/Desktop/Capstone_2022/processed_data/", "muscle_wt-3-24_sig", ".rnk", sep=""), sep = "\t", row.names = FALSE, col.names = FALSE, quote = FALSE)
+write.table(df_muscle924, paste("/Users/malia/Desktop/Capstone_2022/processed_data/for_gsea/", "muscle_wt-3-24_sig", ".txt", sep=""), sep = "\t", row.names = FALSE, col.names = FALSE, quote = FALSE)
 
 df_muscle2436 <- read.csv("processed_data/Muscle_WT-3-36.TXT", sep = "\t", na.strings=c("","NA")) %>% 
   select(Human.gene.name, FC, padj) %>%
@@ -363,4 +366,4 @@ df_muscle2436 <- read.csv("processed_data/Muscle_WT-3-36.TXT", sep = "\t", na.st
   filter(padj <= 0.05) %>%
   select(Human.gene.name, FC)
 
-write.table(df_muscle2436, paste("/Users/malia/Desktop/Capstone_2022/processed_data/", "muscle_wt-3-36_sig", ".rnk", sep=""), sep = "\t", row.names = FALSE, col.names = FALSE, quote = FALSE)
+write.table(df_muscle2436, paste("/Users/malia/Desktop/Capstone_2022/processed_data/for_gsea/", "muscle_wt-3-36_sig", ".txt", sep=""), sep = "\t", row.names = FALSE, col.names = FALSE, quote = FALSE)
